@@ -34,3 +34,9 @@ Possible command options:
 
 
 `` tomato-timer --hours 1 --minutes 30 --seconds 45 `` or `` tomato-timer -h 1 -m 30 -s 45 ``
+
+Alarm sound can be specified this way:
+
+`` tomato-timer -h 1 --source /path/to/custom/alarm.wav ``
+
+Currently only `` .wav `` is supported
