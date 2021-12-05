@@ -22,7 +22,10 @@ var ARGUMENTS = map[string]string{
 	"-h":        "-h"}
 
 func PrepareKey(key string) string {
-	key = ARGUMENTS[key]
+	keyShortened, ok := ARGUMENTS[key]
+	if ok {
+		key = keyShortened
+	}
 	return strings.ReplaceAll(key, "-", "")
 }
 
@@ -94,8 +97,15 @@ func ExtractTimePartAsInt(timePart string, argumentsMap map[string]string) (int,
 	}
 }
 
-func Beep() {
-	f, err := os.Open("./resources/mixkit-alarm-tone-996.wav")
+func Beep(soundSource string) {
+	var source string
+	if soundSource != "" {
+		source = soundSource
+	} else {
+		source = "./resources/mixkit-alarm-tone-996.wav"
+	}
+
+	f, err := os.Open(source)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -154,7 +164,7 @@ func main() {
 			s := i % 60
 			select {
 			case <-doneChannel:
-				Beep()
+				Beep(argumentsMap["source"])
 				return
 			case <-ticker.C:
 				fmt.Printf("\r#-- Time left: %s:%s:%s", ConvertTimePart(h), ConvertTimePart(m), ConvertTimePart(s))
