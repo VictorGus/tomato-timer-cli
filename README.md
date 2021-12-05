@@ -39,4 +39,4 @@ Alarm sound can be specified this way:
 
 `` tomato-timer -h 1 --source /path/to/custom/alarm.wav ``
 
-Currently only `` .wav `` is supported
+Currently only `` .wav `` files are supported
