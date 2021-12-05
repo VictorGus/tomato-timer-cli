@@ -6,23 +6,29 @@
 Timer that can be used via command line interface.
 
 ### Instruction
-To create executable file
+To create executable file:
+
 `` make build ``
 
-To run executable
+To run executable:
+
 `` ./cmd/tomato-timer/tomato-timer -s 10``
 
 The above timer will be off in 10 second
 
-To create package with related resources
+___
+
+To create package with related resources:
+
 `` make pack ``
 
-Package will be located 
+Package will be located:
+
 `` ./target/tomato-timer/ ``
 
 ### CLI Timer 
 
-Possible command options
+Possible command options:
 
 `` tomato-timer --help ``
 
