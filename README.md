@@ -1,4 +1,8 @@
-## Tomato Timer CLI
+
+<img src="https://user-images.githubusercontent.com/43377382/144755292-fa4634e3-fe85-40ad-a74c-aa9ec91c5818.png" alt="drawing" width="108"/> 
+
+## Tomato Timer CLI 
+
 Timer that can be used via command line interface.
 
 ### Instruction
