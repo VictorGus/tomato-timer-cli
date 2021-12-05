@@ -1,2 +1,2 @@
 cmd/tomato-timer/tomato-timer
-target/*
+target/tomato-timer
